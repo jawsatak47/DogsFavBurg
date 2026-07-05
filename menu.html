@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Dog's Favorite Burger Joint — Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0B2545;
+    --navy-mid:#123163;
+    --orange:#FF7A29;
+    --orange-soft:#FFB347;
+    --cream:#FFF6E9;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--navy-deep);
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(255,122,41,0.06), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(255,122,41,0.05), transparent 45%);
+    font-family:'DM Sans', sans-serif;
+    color:var(--cream);
+    display:flex;
+    justify-content:center;
+    padding:40px 16px;
+  }
+  .menu{
+    width:100%;
+    max-width:720px;
+    border:3px solid var(--orange);
+    border-radius:18px;
+    padding:36px 34px 44px;
+    position:relative;
+    background:linear-gradient(180deg, var(--navy-deep), var(--navy-mid));
+  }
+  .menu::before{
+    content:"";
+    position:absolute;
+    inset:10px;
+    border:1px dashed rgba(255,122,41,0.35);
+    border-radius:12px;
+    pointer-events:none;
+  }
+  header{
+    text-align:center;
+    margin-bottom:18px;
+  }
+  .paw-row{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-bottom:10px;
+    opacity:0.85;
+  }
+  .paw{
+    width:20px;
+    height:20px;
+    fill:var(--orange-soft);
+  }
+  h1{
+    font-family:'Bungee', sans-serif;
+    color:var(--orange);
+    font-size:2.15rem;
+    line-height:1.15;
+    margin:0 0 6px;
+    letter-spacing:0.5px;
+    text-shadow:2px 2px 0 rgba(0,0,0,0.35);
+  }
+  .tagline{
+    color:var(--orange-soft);
+    font-size:0.95rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .divider{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:26px 0 16px;
+  }
+  .divider .bone{
+    flex:0 0 auto;
+    width:26px;
+    height:14px;
+    fill:var(--orange);
+    opacity:0.7;
+  }
+  .divider .line{
+    flex:1;
+    height:1px;
+    background:repeating-linear-gradient(90deg, var(--orange) 0 6px, transparent 6px 11px);
+    opacity:0.6;
+  }
+  .section-title{
+    font-family:'Bungee', sans-serif;
+    color:var(--orange);
+    font-size:1.25rem;
+    letter-spacing:1px;
+    white-space:nowrap;
+  }
+  .section-note{
+    text-align:center;
+    font-style:italic;
+    color:var(--cream);
+    opacity:0.75;
+    font-size:0.85rem;
+    margin:-8px 0 18px;
+  }
+  .item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .item .paw-num{
+    flex:0 0 auto;
+    width:30px;
+    height:30px;
+    fill:var(--orange);
+    opacity:0.9;
+    margin-top:2px;
+  }
+  .item-text{
+    flex:1;
+  }
+  .item-name{
+    font-weight:700;
+    color:var(--orange-soft);
+    font-size:1.05rem;
+    display:block;
+  }
+  .item-desc{
+    font-size:0.92rem;
+    color:var(--cream);
+    opacity:0.85;
+  }
+  .kids-grid, .smoothie-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px 20px;
+  }
+  @media (max-width:480px){
+    .kids-grid, .smoothie-grid{grid-template-columns:1fr;}
+    h1{font-size:1.7rem;}
+  }
+  .mini-card{
+    background:rgba(255,122,41,0.08);
+    border:1px solid rgba(255,122,41,0.3);
+    border-radius:10px;
+    padding:12px 14px;
+  }
+  .mini-card .item-name{margin-bottom:2px;}
+  footer{
+    text-align:center;
+    margin-top:30px;
+    font-size:0.8rem;
+    color:var(--orange-soft);
+    opacity:0.8;
+    letter-spacing:1px;
+    text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="menu">
+
+  <header>
+    <div class="paw-row">
+      <svg class="paw" viewBox="0 0 64 64"><circle cx="20" cy="14" r="7"/><circle cx="38" cy="10" r="7"/><circle cx="52" cy="24" r="7"/><ellipse cx="32" cy="42" rx="18" ry="16"/></svg>
+      <svg class="paw" viewBox="0 0 64 64"><circle cx="20" cy="14" r="7"/><circle cx="38" cy="10" r="7"/><circle cx="52" cy="24" r="7"/><ellipse cx="32" cy="42" rx="18" ry="16"/></svg>
+      <svg class="paw" viewBox="0 0 64 64"><circle cx="20" cy="14" r="7"/><circle cx="38" cy="10" r="7"/><circle cx="52" cy="24" r="7"/><ellipse cx="32" cy="42" rx="18" ry="16"/></svg>
+    </div>
+    <h1>MY DOG'S FAVORITE<br>BURGER JOINT</h1>
+    <div class="tagline">Locally Sourced &middot; Cooked Fresh Daily</div>
+  </header>
+
+  <div class="divider">
+    <svg class="bone" viewBox="0 0 100 40"><path d="M10 10 a10 10 0 1 0 0 20 a10 10 0 0 0 0 -20 M90 10 a10 10 0 1 1 0 20 a10 10 0 0 1 0 -20 M15 15 h70 v10 h-70 z"/></svg>
+    <span class="section-title">BURGER COMBOS</span>
+    <div class="line"></div>
+  </div>
+  <div class="section-note">All combos come with fries &amp; a drink</div>
+
+  <div class="item">
+    <svg class="paw-num" viewBox="0 0 64 64"><circle cx="20" cy="14" r="7"/><circle cx="38" cy="10" r="7"/><circle cx="52" cy="24" r="7"/><ellipse cx="32" cy="42" rx="18" ry="16"/></svg>
+    <div class="item-text">
+      <span class="item-name">Regi Burg</span>
+      <span class="item-desc">Regular burger, all the fixings</span>
+    </div>
+  </div>
+
+  <div class="item">
+    <svg class="paw-num" viewBox="0 0 64 64"><circle cx="20" cy="14" r="7"/><circle cx="38" cy="10" r="7"/><circle cx="52" cy="24" r="7"/><ellipse cx="32" cy="42" rx="18" ry="16"/></svg>
+    <div class="item-text">
+      <span class="item-name">Cheesy Burg</span>
+      <span class="item-desc">Cheeseburger, all the fixings</span>
+    </div>
+  </div>
+
+  <div class="item">
+    <svg class="paw-num" viewBox="0 0 64 64"><circle cx="20" cy="14" r="7"/><circle cx="38" cy="10" r="7"/><circle cx="52" cy="24" r="7"/><ellipse cx="32" cy="42" rx="18" ry="16"/></svg>
+    <div class="item-text">
+      <span class="item-name">Westside Burg</span>
+      <span class="item-desc">Bacon cheeseburger, drizzled in BBQ</span>
+    </div>
+  </div>
+
+  <div class="item">
+    <svg class="paw-num" viewBox="0 0 64 64"><circle cx="20" cy="14" r="7"/><circle cx="38" cy="10" r="7"/><circle cx="52" cy="24" r="7"/><ellipse cx="32" cy="42" rx="18" ry="16"/></svg>
+    <div class="item-text">
+      <span class="item-name">Captain Burg</span>
+      <span class="item-desc">Double patty, grilled onions, smoky steak sauce — built for the ones who never slow down</span>
+    </div>
+  </div>
+
+  <div class="item">
+    <svg class="paw-num" viewBox="0 0 64 64"><circle cx="20" cy="14" r="7"/><circle cx="38" cy="10" r="7"/><circle cx="52" cy="24" r="7"/><ellipse cx="32" cy="42" rx="18" ry="16"/></svg>
+    <div class="item-text">
+      <span class="item-name">Buzz Burg</span>
+      <span class="item-desc">Mushroom swiss, roasted garlic aioli — a little wiser, a little slower, worth the wait</span>
+    </div>
+  </div>
+
+  <div class="divider">
+    <svg class="bone" viewBox="0 0 100 40"><path d="M10 10 a10 10 0 1 0 0 20 a10 10 0 0 0 0 -20 M90 10 a10 10 0 1 1 0 20 a10 10 0 0 1 0 -20 M15 15 h70 v10 h-70 z"/></svg>
+    <span class="section-title">KIDS MEALS</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="kids-grid">
+    <div class="mini-card">
+      <span class="item-name">Kids Dog</span>
+      <span class="item-desc">Hot dog &amp; fries</span>
+    </div>
+    <div class="mini-card">
+      <span class="item-name">Lil Burg</span>
+      <span class="item-desc">Kids burger &amp; fries</span>
+    </div>
+  </div>
+
+  <div class="divider">
+    <svg class="bone" viewBox="0 0 100 40"><path d="M10 10 a10 10 0 1 0 0 20 a10 10 0 0 0 0 -20 M90 10 a10 10 0 1 1 0 20 a10 10 0 0 1 0 -20 M15 15 h70 v10 h-70 z"/></svg>
+    <span class="section-title">SMOOTHIES</span>
+    <div class="line"></div>
+  </div>
+  <div class="section-note">Fruit, juice n' yogurt</div>
+
+  <div class="smoothie-grid">
+    <div class="mini-card">
+      <span class="item-name">StrawBlury</span>
+      <span class="item-desc">Strawberry banana</span>
+    </div>
+    <div class="mini-card">
+      <span class="item-name">MangoMint</span>
+      <span class="item-desc">Mango mint</span>
+    </div>
+    <div class="mini-card">
+      <span class="item-name">Blueberry Honeydew</span>
+      <span class="item-desc">Blueberry &amp; honeydew</span>
+    </div>
+  </div>
+
+  <footer>Woof-worthy since day one</footer>
+
+</div>
+</body>
+</html>
